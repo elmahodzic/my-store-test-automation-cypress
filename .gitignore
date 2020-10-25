@@ -1,0 +1,8 @@
+# Visual Studio Code
+.vscode
+
+# NODE dependencies
+node_modules
+
+# Ignore system-generated logs
+debug.log

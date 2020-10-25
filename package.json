@@ -1,0 +1,15 @@
+{
+  "name": "elma_testing",
+  "version": "1.0.0",
+  "description": "Automation test suite for MyStore",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "Elma",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.12.1"
+  }
+}
+
