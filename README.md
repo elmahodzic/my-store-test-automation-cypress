@@ -3,8 +3,7 @@ E2E testing suite for 'My Store' web app
 ## General info
 Test automation suite for 'My Store' web application written in Cypress.io. 'My Store' web app is dummy website for learning test automation. Contains all basic flows of a e-commerce website.
 ## Prerequisites
-You need to install Cypress.io: 
-Cypress : https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-requirements
+You need to install <a href="https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-requirements">Cypress.io</a>
 ## Running the tests
 After running npm install run: `npm run cypress:open` to start cypress.
 ```
