@@ -13,7 +13,7 @@ context("Make an order in My Store web app", function () {
         it("Checking of search box", function () { 
            cy.get('#search_query_top').should('have.class','search_query form-control ac_input')});
         it("Checking if shopping cart is visible", function () {
-            cy.get('[title="View my shopping cart"]').should('have.attr','href','http://automationpractice.com/index.php?controller=order').and('have.text','\n\t\t\tCart\n\t\t\t0\n\t\t\tProduct\n\t\t\tProducts\n\t\t\t$0.00\n\t\t\t(empty)\n\t\t\t\t\t')});
+            cy.get('[title="View my shopping cart"]').should('have.attr','href','http://automationpractice.com/index.php?controller=order').and('have.text','\n\t\t\tCart\n\t\t\t0\n\t\t\tProduct\n\t\t\tProducts\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t(empty)\n\t\t\t\t\t')});
         it("Checking of top menu", function () {
             cy.get('#block_top_menu').should('have.class','sf-contener clearfix col-lg-12')});
         it("Checking of sf menu", function () {
@@ -85,10 +85,8 @@ context("Make an order in My Store web app", function () {
     describe("Agree to terms and conditions", function () {
         it("Checking of page heading 'Shipping'", function () {
             cy.get('.page-heading').should('be.visible').and('have.text','Shipping')});
-        it("Checking if radio button is checked", function () {
-            cy.get('#delivery_option_362337_0').should('be.checked')});
         it("Checking of possibility to go back", function () {
-                cy.get('.button-exclusive').should('be.visible')});
+            cy.get('.button-exclusive').should('be.visible')});
         it("Checking of 'Terms&Service' form", function () {
             cy.get('.iframe').should('have.attr','href','http://automationpractice.com/index.php?id_cms=3&controller=cms&content_only=1').and('have.text','(Read the Terms of Service)')});
         it("Checking of possibility to contact", function () {
@@ -105,7 +103,7 @@ context("Make an order in My Store web app", function () {
             cy.get('.page-heading').should('have.text','Please choose your payment method')
             cy.get('.bankwire').should('have.attr','href','http://automationpractice.com/index.php?fc=module&module=bankwire&controller=payment').and('have.text','\n            \tPay by bank wire (order processing will be longer)\n            ')
             cy.get('.cheque').should('have.text','\n                Pay by check (order processing will be longer)\n            ')});
-            it("Checking if is headline visible", function () {
+        it("Checking if is headline visible", function () {
             cy.get('h1').should('be.visible').and('have.text','Please choose your payment method')});
         it("Checking availability of a product", function () {
             cy.get('.label').should('have.text','In stock')});

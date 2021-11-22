@@ -53,8 +53,8 @@ Cypress.Commands.add("visitHomepage", () => {
 });
 Cypress.Commands.add("login", () => {
     cy.get('.login').click();
-    cy.get('#email').type('tester072020@gmail.com')
-    cy.get('#passwd').type('Testing2020')
+    cy.get('#email').type('test.test2021@gmail.com')
+    cy.get('#passwd').type('Test2021')
     cy.get('#SubmitLogin > span').click()
 });
 Cypress.Commands.add("logout", () => {
@@ -72,13 +72,13 @@ Cypress.Commands.add("logoutIfLoggedIn", () => {
 Cypress.Commands.add("changePasswordToAnOldOne", () => {
     cy.visit("http://automationpractice.com/index.php")
     cy.get('.login').click();
-    cy.get('#email').type('tester072020@gmail.com')
+    cy.get('#email').type('test.test2021@gmail.com')
     cy.get('#passwd').type('0123456789')
     cy.get('#SubmitLogin > span').click()
     cy.get('.myaccount-link-list > :nth-child(4) > a > span').click()
     cy.get('#old_passwd').type('0123456789')
-    cy.get('#passwd').type('Testing2020')
-    cy.get('#confirmation').type('Testing2020')
+    cy.get('#passwd').type('Test2021')
+    cy.get('#confirmation').type('Test2021')
     cy.get(':nth-child(11) > .btn > span').click()
     cy.get('.logout').click()
 });
